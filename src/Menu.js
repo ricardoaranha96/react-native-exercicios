@@ -6,6 +6,7 @@ import Simples from './components/Simples';
 import ParImpar from './components/ParImpar';
 import { Inverter, MegaSena } from './components/Multi';
 import Contador from './components/Contador'
+import Plataformas from './components/Plataformas';
 
 const Drawer = createDrawerNavigator();
 
@@ -14,6 +15,7 @@ export default function () {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
+                <Drawer.Screen name="Plataformas" component={Plataformas}></Drawer.Screen>
                 <Drawer.Screen name="Contador">
                     {props => <Contador numeroInicial={0} />}
                 </Drawer.Screen>
