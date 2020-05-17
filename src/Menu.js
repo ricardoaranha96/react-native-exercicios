@@ -7,6 +7,7 @@ import ParImpar from './components/ParImpar';
 import { Inverter, MegaSena } from './components/Multi';
 import Contador from './components/Contador'
 import Plataformas from './components/Plataformas';
+import ValidarProps from './components/ValidarProps';
 
 const Drawer = createDrawerNavigator();
 
@@ -15,6 +16,9 @@ export default function () {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
+                <Drawer.Screen name="Validar Props">
+                    {props => <ValidarProps ano={18}></ValidarProps>}
+                </Drawer.Screen>
                 <Drawer.Screen name="Plataformas" component={Plataformas}></Drawer.Screen>
                 <Drawer.Screen name="Contador">
                     {props => <Contador numeroInicial={0} />}
