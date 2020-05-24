@@ -9,5 +9,14 @@ export default StyleSheet.create({
         borderColor: '#222',
         fontSize: 24,
         fontWeight: 'bold'
+    },
+    input: {
+        height: 170,
+        fontSize: 40,
+        borderColor: 'grey',
+        borderWidth: 1
+    },
+    font40: {
+        fontSize: 40
     }
 });

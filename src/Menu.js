@@ -8,6 +8,9 @@ import { Inverter, MegaSena } from './components/Multi';
 import Contador from './components/Contador'
 import Plataformas from './components/Plataformas';
 import ValidarProps from './components/ValidarProps';
+import Evento from './components/Evento'
+import Avo from './components/ComunicacaoDireta'
+import ComunicacaoIndireta from './components/ComunicacaoIndireta'
 
 const Drawer = createDrawerNavigator();
 
@@ -16,6 +19,11 @@ export default function () {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
+                <Drawer.Screen name="Comunicação Indireta" component={ComunicacaoIndireta}></Drawer.Screen>
+                <Drawer.Screen name="Comunicação Direta">
+                    {props => <Avo nome="João" sobrenome="Aranha"></Avo>}
+                </Drawer.Screen>
+                <Drawer.Screen name="Evento" component={Evento}></Drawer.Screen>
                 <Drawer.Screen name="Validar Props">
                     {props => <ValidarProps ano={18}></ValidarProps>}
                 </Drawer.Screen>
@@ -23,8 +31,8 @@ export default function () {
                 <Drawer.Screen name="Contador">
                     {props => <Contador numeroInicial={0} />}
                 </Drawer.Screen>
-                <Drawer.Screen name="Mega Sena" component={MegaSena}></Drawer.Screen>            
-                <Drawer.Screen name="Inverter">                    
+                <Drawer.Screen name="Mega Sena" component={MegaSena}></Drawer.Screen>
+                <Drawer.Screen name="Inverter">
                     {props => <Inverter texto="React Native" />}
                 </Drawer.Screen>
                 <Drawer.Screen name="Par & Ímpar">
