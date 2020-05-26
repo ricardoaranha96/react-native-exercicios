@@ -12,6 +12,7 @@ import Evento from './components/Evento'
 import Avo from './components/ComunicacaoDireta'
 import ComunicacaoIndireta from './components/ComunicacaoIndireta';
 import ListaFlex from './components/ListaFlex';
+import Flex from './components/Flex';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,6 +21,7 @@ export default function () {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
+                <Drawer.Screen name="Flex" component={Flex}></Drawer.Screen>
                 <Drawer.Screen name="Lista (Flex Box)" component={ListaFlex}></Drawer.Screen>
                 <Drawer.Screen name="Comunicação Indireta" component={ComunicacaoIndireta}></Drawer.Screen>
                 <Drawer.Screen name="Comunicação Direta">
